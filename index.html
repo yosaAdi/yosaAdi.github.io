@@ -49,9 +49,9 @@
 
 <!-- Jumbotron -->
 <section class="jumbotron text-center">
-    <img src="image/1685019268115.jpg" alt="yosa Adi" width="200" class="rounded-circle img-thumbnail">
+    <img src="image/1686994254697.jpg" alt="yosa Adi" width="200" class="rounded-circle img-thumbnail">
     <h1 class="display-4">Yosa Adi</h1>
-    <p class="lead">Student | Web</p>
+    <p class="lead">Student College | Web Develover</p>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,128L34.3,128C68.6,128,137,128,206,144C274.3,160,343,192,411,170.7C480,149,549,75,617,69.3C685.7,64,754,128,823,176C891.4,224,960,256,1029,234.7C1097.1,213,1166,139,1234,112C1302.9,85,1371,107,1406,117.3L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z" style="--darkreader-inline-fill: #202324;" data-darkreader-inline-fill=""></path></svg>
     
 </section>
@@ -67,10 +67,10 @@
         </div>
         <div class="row justify-content-center fs-5 text-center">
             <div class="col-md-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque perferendis eius excepturi nostrum, saepe earum repellendus error accusamus ipsam neque facere eum dolore amet temporibus veniam dolor est repudiandae inventore!</p>
+                <p>Hi,i'm yosa a web develover and a fron end develover</p>
             </div>
             <div class="col-md-4">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatem at, assumenda molestiae, ab numquam deserunt quidem laudantium illo iusto soluta quibusdam, molestias sit excepturi.</p>
+                <p>have a skill in building a website</p>
             </div>
         </div>
     </div>
@@ -145,18 +145,18 @@
     <div class="row justify-content-center mb-3">
    
     <div class="col-md-6">
-      <form>
+      <form  name="yosa-contact-form">
         <div class="mb-3">
           <label for="name" class="form-label">Nama Lengkap</label>
-          <input type="text" class="form-control" id="name" aria-describedby="name">
+          <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" aria-describedby="email">
+          <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
         </div>
         <div class="mb-3">
           <label for="pesan" class="form-label">Pesan</label>
-          <textarea class="form-control" id="pesan" rows="3"></textarea>
+          <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Kirim</button>
       </form>
@@ -176,5 +176,17 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      
+      const scriptURL = '<https://script.google.com/macros/s/AKfycbyAM_8ArVGaelgWVCCPFMDkiIx5xa2jsjeV-nqyAElP16Of6FrlHMSQYYu6PNKRaaQu/exec>'
+      const form = document.forms['yosa-contact-form']
+    
+      form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
   </body>
 </html>
