@@ -49,7 +49,7 @@
 
 <!-- Jumbotron -->
 <section class="jumbotron text-center">
-    <img src="image/1686994254697.jpg" alt="yosa Adi" width="200" class="rounded-circle img-thumbnail">
+    <img src="8.jpg" alt="yosa Adi" width="200" class="rounded-circle img-thumbnail">
     <h1 class="display-4">Yosa Adi</h1>
     <p class="lead">Student College | Web Develover</p>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,128L34.3,128C68.6,128,137,128,206,144C274.3,160,343,192,411,170.7C480,149,549,75,617,69.3C685.7,64,754,128,823,176C891.4,224,960,256,1029,234.7C1097.1,213,1166,139,1234,112C1302.9,85,1371,107,1406,117.3L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z" style="--darkreader-inline-fill: #202324;" data-darkreader-inline-fill=""></path></svg>
@@ -67,7 +67,7 @@
         </div>
         <div class="row justify-content-center fs-5 text-center">
             <div class="col-md-4">
-                <p>Hi,i'm yosa a web develover and a fron end develover</p>
+                <p>Hi,i'm yosa a web develover and a front end developer</p>
             </div>
             <div class="col-md-4">
                 <p>have a skill in building a website</p>
@@ -89,7 +89,7 @@
         <div class="row justify-content-center">
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <img src="image/projects/1.jpg" class="card-img-top" alt="projects 1">
+                    <img src="1.jpg" class="card-img-top" alt="projects 1">
                     <div class="card-body">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
@@ -97,7 +97,15 @@
             </div>
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <img src="image/projects/2.jpg" class="card-img-top" alt="projects 2">
+                    <img src="2.jpg" class="card-img-top" alt="projects 2">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div>a
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="6.jpg" class="card-img-top" alt="projects 3">
                     <div class="card-body">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
@@ -105,7 +113,7 @@
             </div>
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <img src="image/projects/6.jpg" class="card-img-top" alt="projects 3">
+                    <img src="5.jpg" class="card-img-top" alt="projects 4">
                     <div class="card-body">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
@@ -113,15 +121,7 @@
             </div>
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <img src="image/projects/5.jpg" class="card-img-top" alt="projects 4">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-md-4 mb-3">
-                <div class="card">
-                    <img src="image/projects/7.jpg" class="card-img-top" alt="projects 5">
+                    <img src="7.jpg" class="card-img-top" alt="projects 5">
                     <div class="card-body">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
@@ -145,7 +145,11 @@
     <div class="row justify-content-center mb-3">
    
     <div class="col-md-6">
-      <form  name="yosa-contact-form">
+      <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+        <strong>Terima Kasih</strong>  Pesan anda telah kami terima.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <form  name="contact-form">
         <div class="mb-3">
           <label for="name" class="form-label">Nama Lengkap</label>
           <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
@@ -158,7 +162,11 @@
           <label for="pesan" class="form-label">Pesan</label>
           <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Kirim</button>
+        <button type="submit" class="btn btn-primary"btn-kirim >Kirim</button>
+        <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+          <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+          <span role="status">Loading...</span>
+        </button>
       </form>
       </div>
     </div>
@@ -178,13 +186,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
       
-      const scriptURL = '<https://script.google.com/macros/s/AKfycbyAM_8ArVGaelgWVCCPFMDkiIx5xa2jsjeV-nqyAElP16Of6FrlHMSQYYu6PNKRaaQu/exec>'
-      const form = document.forms['yosa-contact-form']
-    
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzMFUBGtv-N3NqIWvuvSL0uVlvkwc2eGWfvTA8pcEpCVLAEzdKh-8PHBBHxKP5Ej7ue/exec'
+      const form = document.forms['contact-form']
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnLoading = document.querySelector('.btn-loading');
+      const myAlert = document.querySelector('.my-alert');
+
       form.addEventListener('submit', (e) => {
         e.preventDefault()
+       btnKirim.classList.toggle('d-none');
+       btnLoading.classList.toggle('d-none');
+      
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
+          .then(response => {
+                   
+            console.log('Success!', response)})
           .catch(error => console.error('Error!', error.message))
       })
     </script>
